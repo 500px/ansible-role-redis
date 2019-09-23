@@ -35,6 +35,9 @@ redis_includes: []
 # Require authentication to Redis with a password.
 redis_requirepass: ""
 
+# Setup redis slave if enabled 
+redis_slaveof: ''
+
 # Disable certain Redis commands for security reasons.
 redis_disabled_commands: []
 #  - FLUSHDB

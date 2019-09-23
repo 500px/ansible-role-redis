@@ -50,6 +50,10 @@ include {{ include }}
 requirepass {{ redis_requirepass }}
 {% endif %}
 
+{% if redis_slaveof %}
+slaveof {{ redis_slaveof }}
+{% endif %}
+
 {% for redis_disabled_command in redis_disabled_commands %}
 rename-command {{ redis_disabled_command }} ""
 {% endfor %}
